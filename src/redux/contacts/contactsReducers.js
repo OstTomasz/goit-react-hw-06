@@ -1,4 +1,4 @@
-import { ADD_CONTACT, DELETE_CONTACT, initialState } from "./constants";
+import { ADD_CONTACT, DELETE_CONTACT, initialState } from "./contactsConstants";
 
 export const contactsReducer = (state = initialState, action) => {
   switch (action.type) {

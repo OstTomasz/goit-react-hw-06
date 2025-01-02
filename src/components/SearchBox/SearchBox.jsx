@@ -3,6 +3,8 @@ import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { filterContacts } from "../../redux/filters/actions";
 
+import _ from "lodash";
+
 export const SearchBox = () => {
   const searchBoxId = useId();
   const dispatch = useDispatch();
@@ -23,7 +25,7 @@ export const SearchBox = () => {
             name="search"
             placeholder="Search..."
             id={searchBoxId}
-            onChange={handleChange}
+            onChange={_.debounce(handleChange, 300)}
           />
         </div>
       </Form>

@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { ADD_CONTACT, DELETE_CONTACT } from "./constants";
+import { ADD_CONTACT, DELETE_CONTACT } from "./contactsConstants";
 
 export const addContact = (values) => ({
   type: ADD_CONTACT,

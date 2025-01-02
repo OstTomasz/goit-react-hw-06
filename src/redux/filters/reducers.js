@@ -5,12 +5,7 @@ export const filtersReducer = (state = initialState, action) => {
     case FILTER_CONTACTS:
       console.log(action.payload);
       return {
-        contacts: {
-          items: state.contacts.items.filter((contact) =>
-            contact.name.toLowerCase().includes(action.payload.toLowerCase())
-          ),
-        },
-        filters: { name: action.payload },
+        name: action.payload,
       };
     default:
       return state;
