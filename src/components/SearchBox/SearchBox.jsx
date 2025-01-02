@@ -1,14 +1,17 @@
 import { useId } from "react";
 import { Formik, Form, Field } from "formik";
+import { useDispatch } from "react-redux";
+import { filterContacts } from "../../redux/filters/actions";
 
-export const SearchBox = ({ handleFilter }) => {
+export const SearchBox = () => {
   const searchBoxId = useId();
+  const dispatch = useDispatch();
 
   const handleChange = (values) => {
-    handleFilter(values.target.value);
+    dispatch(filterContacts(values.target.value));
   };
   return (
-    <Formik initialValues={{}}>
+    <Formik>
       <Form className="form">
         <div>
           <label className="label" htmlFor={searchBoxId}>
