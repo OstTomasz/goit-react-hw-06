@@ -12,6 +12,7 @@ export const SearchBox = () => {
   const handleChange = (values) => {
     dispatch(filterContacts(values.target.value));
   };
+
   return (
     <Formik>
       <Form className="form">
