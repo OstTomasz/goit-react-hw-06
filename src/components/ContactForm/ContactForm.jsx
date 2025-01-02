@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contacts/contactsActions";
+import { addContact } from "../../redux/contactsSlice";
 
 const initialValues = {
   name: "",

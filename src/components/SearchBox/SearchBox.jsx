@@ -1,9 +1,8 @@
 import { useId } from "react";
+import _ from "lodash";
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
-import { filterContacts } from "../../redux/filters/actions";
-
-import _ from "lodash";
+import { filterContacts } from "../../redux/filtersSlice";
 
 export const SearchBox = () => {
   const searchBoxId = useId();
@@ -26,7 +25,7 @@ export const SearchBox = () => {
             name="search"
             placeholder="Search..."
             id={searchBoxId}
-            onChange={_.debounce(handleChange, 300)}
+            onChange={_.debounce(handleChange, 500)}
           />
         </div>
       </Form>
